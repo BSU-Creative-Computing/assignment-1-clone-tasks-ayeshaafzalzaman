@@ -1,0 +1,66 @@
+#header{
+    display: flex;
+    background-color: rgb(42,151,224);
+}
+h1{
+    color: white;
+    font-family: Courier, monospace ;
+    flex: 1;
+}
+#search.box{
+    flex:1;
+    justify-content: center;
+    margin-top: 800px;
+    margin-left: 150px;
+    border: 1px solid black;
+}
+.seaarch-bar{
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    justify-content: center;
+}
+
+nav{
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: end;
+}
+a{
+    text-decoration: none;
+    text-align: right;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: aliceblue;
+}    
+#container-images{
+    background-color: #ccc;
+    padding: 20px;
+}
+.avengers1{
+    background-color: white;
+    margin-right: 665px;
+    margin-left: 200px;
+
+}
+@media screen and (max-width:1280px) and(min-width:1025){
+    nav{
+        width: auto;
+    }
+    #container-images{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    
+
+}
+@media screen and (max-width:1280) and (min-width:1024) {
+    #container-images{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #container{
+        display: inline;
+    }
+}

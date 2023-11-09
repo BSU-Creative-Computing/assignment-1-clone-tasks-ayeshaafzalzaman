@@ -1,0 +1,177 @@
+//creting mixins for mediaquries
+@mixin breakpoint($minwidth, $maxwidth){
+    @media screen and (min-width:$minwidth ) and (max-width:$maxwidth){
+        @content;
+    }
+}
+// Mixin for centering elements
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+$header_footercolor:#8ccff7;
+$circle_rowhover:#444;
+$circle1:#4e89ae;
+$circle2:#43658b;
+$circle3:#ed6663;
+$circle4:#ffa372;
+//heights
+$height1 :400px;
+$height2:300px;
+$height3:200px;
+//circles radius
+$radius1 :70px;
+$radius2: 80px;
+$radius3: 90px;
+$radius4:100px;
+//footer height
+$footer_height:50px;
+
+
+#header{
+    background-color: $header_footercolor;
+    height: $height1;
+    @include center;
+}
+//arranging the box
+#box{
+    height: $height1;
+    width: $height1;
+    @include center();
+    background-color: rgb(207, 207, 207);
+    color: rgb(142, 135, 135);
+}
+
+//hiding size
+#size2,#size3{
+    display: none;
+}
+#space{
+    background-color: white;
+    width:100%;
+    height: 40px;
+}
+  
+
+.lightblue,.darkblue,.red,.orange{
+    width: 100%;
+    height: 40px;
+    
+}
+.lightblue{
+    background-color: $circle1;
+}
+.darkblue{
+    background-color: $circle2;
+}
+.red{
+    background-color: $circle3;
+}
+.orange{
+    background-color: $circle4;
+}
+ //NOW CIRCLES
+.circles{
+   
+    border: black 1px solid;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.smallest{
+    width: $radius1;
+    height: $radius1;
+    border-radius: 50%;
+    background-color: $circle1;
+}
+.smaller{
+    width: $radius2;
+    height: $radius2;
+    border-radius: 50%;
+    background-color: $circle2;
+}
+.medium{
+    width: $radius3;
+    height: $radius3;
+    background-color: $circle3;
+    border-radius: 50%;
+}
+.large{
+    width: $radius4;
+    height: $radius4;
+    border-radius: 50%;
+    background-color: $circle4;
+}
+//now applying hover effect
+.smallest:hover,.smaller:hover,.medium:hover,.large:hover,.lightblue:hover,.darkblue:hover,.red:hover,.orange:hover{
+    background-color: #444;
+}
+footer{
+    background-color: $header_footercolor;
+    height: 50px;
+
+}
+@media screen and (max-width:620px){
+    #header{
+        height: $height2;
+        background-color: $header_footercolor;
+        @include center();
+    }
+    #size1,#size3{
+        display: none;
+    }
+    #size2{
+        display: block;
+    }
+    .circles{
+        height: 400px;
+        @include center();
+        flex-direction: column;
+    }
+    #box{
+        height: $height2;
+        width: $height2;
+    }
+    .smallest:hover,.smaller:hover,.medium:hover,.large:hover,.lightblue:hover,.darkblue:hover,.red:hover,.orange:hover{
+        background-color: #444;
+    }
+    footer{
+        background-color: $header_footercolor;
+    }
+    
+}
+@media screen and (max-width:480px) {
+    #header{
+        height: $height3;
+        background-color: $header_footercolor;
+        @include center();
+    }
+    #size1,#size2{
+        display: none;
+    }
+    #size3{
+        display: block;
+    }
+    .circles{
+        height: 400px;
+        @include center();
+        flex-direction: column;
+    }
+    #box{
+        height: $height3;
+        width: $height3;
+    }
+    .smallest:hover,.smaller:hover,.medium:hover,.large:hover,.lightblue:hover,.darkblue:hover,.red:hover,.orange:hover{
+        background-color: #444;
+    }
+    footer{
+        background-color: $header_footercolor;
+    }
+    
+}
