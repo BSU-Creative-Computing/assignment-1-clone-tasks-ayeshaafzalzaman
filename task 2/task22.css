@@ -136,6 +136,7 @@ section{
     #container{
         display: block;
     }
+    
     #left,#right{
         flex-direction: column;
     }

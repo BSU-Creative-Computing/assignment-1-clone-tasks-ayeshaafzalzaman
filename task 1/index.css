@@ -1,0 +1,71 @@
+
+
+#lala{
+   display: block;
+   
+   
+}
+
+#p{
+    padding: 30%;
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding-bottom: 20px;
+    margin-top: 20px;
+
+}
+@media (max-width: 601px) {
+    img {
+            display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    svg {
+        width: 8%;
+        margin-bottom:-4%;
+    }
+    p {
+        font-size: smaller;
+    }
+    footer {
+        padding: 2px;
+    }
+  }
+
+  @media (min-width: 601px) and (max-width:901px) {
+    img {
+     
+      width: 48%; 
+      float: left;
+    }
+    
+    svg{
+        width: 10%;
+    }
+    p {
+        font-size: medium;
+    }
+
+    footer {
+        padding: 5px;
+    }
+  }
+
+
+  @media (min-width:901px) {
+    img {
+      width: 33%;  
+      float: left;
+    }
+
+    p {
+        font-size: large;
+    }
+  }
+
+
